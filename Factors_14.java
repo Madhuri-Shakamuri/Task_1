@@ -14,7 +14,7 @@ public class Factors_14
         System.out.println("Enter a number: ");
         int n=sc.nextInt();
         System.out.println("Factors: ");
-        for(int i=1;i<n;i++)
+        for(int i=1;i<=n;i++)
         {
             if(n%i==0)  
             {
