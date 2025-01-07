@@ -14,16 +14,19 @@ public class N_Primes_8
         System.out.println("Enter a number: ");
         int n=sc.nextInt();
         System.out.println(n+" Prime numbers : ");
-        int num=2,range=0;
-        for(int i=0;range<n;i++)
-        {
-            if(isPrime(num))
-            {
-                System.out.println(num);
-                range++;
-            }
-            num++;
-        }
+        int prime_count=1;
+	    for(int i=1;i<=Integer.MAX_VALUE;i++)
+	    {
+	        if(prime_count<=n)
+	        {
+	         if(isPrime(i))
+	        {
+	         prime_count++; 
+	         System.out.println(i);
+	        }  
+	        }
+	  
+	    }
     }
 
     public static boolean isPrime(int n)
