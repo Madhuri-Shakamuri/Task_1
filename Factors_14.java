@@ -1,7 +1,7 @@
 /* Task:1
          
          14.Factors
-         Highlight: 12 -->1,2,3,4,6
+         Highlight: 12 -->1,2,3,4,6,12
   
 */
 import java.util.Scanner;
