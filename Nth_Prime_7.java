@@ -6,28 +6,24 @@
         
 */
 import java.util.Scanner;
-public class Nth_Prime_7 
+public class Main 
 {
     public static void main(String... args)
     {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a number: ");
         int n=sc.nextInt();
-        int prime_num=0;
-        for(int i=1;i<=100;i++)
-        {
-            if(isPrime(i))
-            {
-              prime_num++;
-
-            }
-            if(n==prime_num)
-            {
-                System.out.println(n+" th prime is "+i);
-                break;
-            }
-            
-        }
+        int prime_count=0;
+        for(int i=1;i<=Integer.MAX_VALUE;i++)
+	    {
+	   if(isPrime(i))
+	   {
+	         prime_count++; 
+	         if(prime_count==n)
+	         System.out.println(i);
+            }  
+	  
+	}
            
     }
     public static boolean isPrime(int n)
