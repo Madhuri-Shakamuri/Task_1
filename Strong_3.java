@@ -27,22 +27,16 @@ public class Strong_3
     
     public static boolean isStrong(int n)
     {
-        int pro=1,sum=0,rem=0;
+        int fact=0,rem=0;
         int original=n;
-     while(n>0)
-     {
-        rem=n%10;
-        pro=1;
-        for(int i=rem;i>=1;i--)
+        while(n>0)
         {
-            pro*=i;
+            rem=n%10;
+            fact=fact+factorial(rem);
+            n=n/10;
+            
         }
-        
-        sum+=pro;
-        n=n/10;
-
-     }
-     if(sum==original)
+     if(fact==original)
      {
         return true;
      }
@@ -51,4 +45,13 @@ public class Strong_3
         return false;
      }
     }
+    public static int factorial(int num)
+    {
+            int fact=1;
+            for(int i=num;i>=1;i--)
+            {
+                fact*=i;
+            }
+            return fact;
+   }
 }
